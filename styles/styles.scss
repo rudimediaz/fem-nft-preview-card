@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-1: hsl(215, 51%, 70%);
+  --primary-2: hsl(178, 100%, 50%);
+  --accent-3: hsl(217, 54%, 11%);
+  --accent-2: hsl(216, 50%, 16%);
+  --accent-1: hsl(215, 32%, 27%);
+  --text-base: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--accent-3);
+  color: #fff;
+}
+
+p {
+  font-size: var(--text-base);
+}
+
+.font-sans {
+  font-family: "Outfit", sans-serif;
+}
