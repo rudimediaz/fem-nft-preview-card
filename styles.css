@@ -1,0 +1,198 @@
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-1: hsl(215, 51%, 70%);
+  --cyan-1: hsl(178, 100%, 50%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  margin: 0;
+}
+
+.bg-dark {
+  background-color: hsl(217, 54%, 11%);
+  color: #fff;
+}
+
+.font-sans {
+  font-family: "Outfit", sans-serif;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template: minmax(100vh, 1fr) max-content / 1fr;
+}
+
+.page-wrapper > main {
+  display: contents;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > * {
+  width: min(90%, 350px);
+}
+
+/* card  */
+.card {
+  background-color: hsl(216, 50%, 16%);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+  border-radius: 15px;
+}
+
+.card > h1 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.card > h1:hover {
+  cursor: pointer;
+  color: var(--cyan-1);
+}
+/* 
+  .card :is(p) {
+    flex: 1;
+  } */
+
+.card > p {
+  color: var(--blue-1);
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.item-image {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.item-image:hover {
+  cursor: pointer;
+}
+
+.item-image:hover::before {
+  opacity: 0.5;
+  transform: scale(1, 1);
+}
+
+.item-image::before,
+.item-image .item-image__overlay {
+  transition: all 0.7s cubic-bezier(0.97, 0.07, 0.05, 1) 0.2s;
+}
+
+.item-image:hover > * {
+  opacity: 1;
+}
+
+.item-image::before {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: var(--cyan-1);
+  opacity: 0;
+  transform: scale(0, 0);
+}
+
+.item-image > img {
+  height: 100%;
+  width: 100%;
+}
+
+.item-image .item-image__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+.item-image-overlay {
+  display: grid;
+  place-items: center;
+  opacity: 0;
+}
+
+.item-status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-status .item-status__content {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.item-price > span {
+  color: var(--cyan-1);
+}
+
+.item-exp {
+  color: var(--blue-1);
+}
+
+.item-status img {
+  height: 100%;
+}
+
+.separator {
+  border-top: 1pt solid hsl(215, 32%, 27%);
+}
+
+.item-owner {
+  display: flex;
+  gap: 1ch;
+  align-items: center;
+}
+
+.item-owner > img {
+  height: 34px;
+  border: 1pt solid #fff;
+  border-radius: 50px;
+}
+
+.item-owner-details {
+  display: flex;
+}
+
+.item-owner-details > pre {
+  color: var(--blue-1);
+}
+
+.item-owner-details > span {
+  font-weight: 300;
+}
+
+.item-owner-details > span:hover {
+  color: var(--cyan-1);
+  cursor: pointer;
+}

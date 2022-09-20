@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,14 +15,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
 
     <title>Frontend Mentor | NFT preview card component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <link rel="stylesheet" href="/styles/styles.scss" />
+    <link rel="stylesheet" href="/styles.css" />
     <style>
       .attribution {
         font-size: 11px;
@@ -38,33 +38,31 @@
       <main>
         <div class="container">
           <div class="card">
-            <div class="card__visual product-image">
-              <img
-                class="product-image__main"
-                src="/images/image-equilibrium.jpg"
-                alt="an artsy cube"
-              />
-              <div class="product-image__overlay">
+            <div class="card__visual item-image">
+              <img src="/images/image-equilibrium.jpg" alt="artsy cube" />
+              <div class="item-image__overlay item-image-overlay">
                 <img src="/images/icon-view.svg" alt="eye icon" />
               </div>
             </div>
             <h1>Equilibrium #3429</h1>
             <p>Our Equilibrium collection promotes balance and calm.</p>
-            <div class="product-status">
-              <div class="product-status__item product-price">
+            <div class="item-status">
+              <div class="item-status__content item-price">
                 <img src="/images/icon-ethereum.svg" alt="ethereum icon" />
                 <span>0.041 ETH</span>
               </div>
-              <div class="product-status__item">
+              <div class="item-status__content item-exp">
                 <img src="/images/icon-clock.svg" alt="clock icon" />
                 <span>3 days left</span>
               </div>
             </div>
             <div class="separator"></div>
-            <div class="product-owner">
-              <img src="/images/image-avatar.png" alt="avatar" />
-              <pre>Creation of </pre>
-              <span>Jules Wyvern</span>
+            <div class="card__owner item-owner">
+              <img src="/images/image-avatar.png" alt="owner avatar" />
+              <div class="item-owner-details">
+                <pre>Creation of </pre>
+                <span>Jules Wyvern</span>
+              </div>
             </div>
           </div>
         </div>
