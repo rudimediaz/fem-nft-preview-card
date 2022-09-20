@@ -5,6 +5,7 @@ html {
 :root {
   --blue-1: hsl(215, 51%, 70%);
   --cyan-1: hsl(178, 100%, 50%);
+  --text-base: 18px;
 }
 
 *,
@@ -68,6 +69,7 @@ pre {
 .card > h1 {
   font-weight: 600;
   font-size: 22px;
+  margin-top: 0.5rem;
 }
 
 .card > h1:hover {
@@ -79,10 +81,14 @@ pre {
     flex: 1;
   } */
 
+.card *:not(h1) {
+  font-size: var(--text-base);
+}
+
 .card > p {
   color: var(--blue-1);
   line-height: 1.5;
-  font-size: 18px;
+  font-size: var(--text-base);
   font-weight: 300;
 }
 
