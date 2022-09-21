@@ -150,6 +150,7 @@ pre {
 .item-status {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .item-status .item-status__content {
@@ -160,6 +161,7 @@ pre {
 
 .item-price > span {
   color: var(--cyan-1);
+  font-weight: 600;
 }
 
 .item-exp {
